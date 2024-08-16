@@ -32,21 +32,17 @@ export default async function ProductDetails({ params }) {
   return (
     <>
      <Head>
-        <title>{product.title}</title>
-        <meta name="description" content={product.description} />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={product.title} />
-        <meta property="og:description" content={product.description} />
-        <meta property="og:image" content={product.image} />
-        <meta property="og:url" content={`https://yourdomain.com/products/${product.id}`} />
-        <meta property="og:type" content="product" />
-
-        {/* Twitter Card Meta Tags */}
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={`https://products.oonzoo.com/product/${id}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Your Site Name" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={product.title} />
-        <meta name="twitter:description" content={product.description} />
-        <meta name="twitter:image" content={product.image} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
       </Head>
     <div className={styles.productContainer}>
     <h1 className={styles.productTitle}>{product.title}</h1>
