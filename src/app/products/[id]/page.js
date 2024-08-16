@@ -29,6 +29,9 @@ export default async function ProductDetails({ params }) {
   }
   const product = await res.json();
 
+  const { title, description, image, price, rating } = product;
+
+
   return (
     <>
      <Head>
